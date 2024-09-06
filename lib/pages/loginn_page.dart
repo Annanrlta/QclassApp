@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:matcher/matcher.dart';
+import 'package:q_class/pages/home_page.dart';
 import 'package:q_class/pages/landing_page.dart';
 import 'package:q_class/pages/registerr_page.dart';
 import 'package:q_class/themes/themes.dart';
@@ -108,7 +109,7 @@ class LoginnPage extends StatelessWidget {
             //     }),
             //   ),
                 InkWell(onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => LandinggPage()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
                 },
                   child: Container(
                     height: 55,

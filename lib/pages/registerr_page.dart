@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:matcher/matcher.dart';
+import 'package:q_class/pages/home_page.dart';
 import 'package:q_class/pages/landing_page.dart';
 import 'package:q_class/pages/loginn_page.dart';
 import 'package:q_class/themes/themes.dart';
@@ -27,7 +28,7 @@ class RegisterrPage extends StatelessWidget {
               SizedBox(
               height: 10,
             ),
-            Text("Buat akun untuk mulai pesan",
+            Text("Buat akun untuk mulai",
                 style: blackTextstyle.copyWith(
                   fontWeight: FontWeight.w100,
                   fontSize: 17,
@@ -148,7 +149,7 @@ class RegisterrPage extends StatelessWidget {
 
             //buttom
             InkWell(onTap: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => LandinggPage()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
             },
               child: Container(
                 height: 55,

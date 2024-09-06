@@ -7,6 +7,7 @@ import 'package:q_class/pages/kalender_page.dart';
 import 'package:q_class/pages/landing_page.dart';
 import 'package:q_class/pages/layanan_page.dart';
 import 'package:q_class/pages/materi_page.dart';
+import 'package:q_class/pages/Pengumuman/pengumuman_one_page.dart';
 import 'package:q_class/pages/profil_page.dart';
 import 'package:q_class/pages/splash_page.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Qclass App',
       theme: ThemeData(
         primarySwatch: Colors.blue,

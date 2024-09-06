@@ -8,14 +8,14 @@ import 'package:flutter/material.dart';
 // Warna
 Color primaryColor = Color(0XFF93D9FF);
 Color secondaryColor = Color(0XFFE7292C);
-Color blackColor = Color(0XFF000000);
+Color blackColor = Color(0XFF03011D);
 Color bgColor = Color(0XFFE1E9FF);
 Color greyColor = Color(0XFF828282);
 Color purpleColor = Color(0XFFD739F4);
 Color blueColor = Color(0XFF3984F4);
 Color greenColor = Color(0XFF39F469);
 Color yellowColor = Color(0XFFF4C139);
-Color whiteColor = Color(0XFFFFFFFF);
+Color whiteColor = Color(0XFFFFF5F5);
 Color borderColor = Color(0XFFCDCDCD);
 
 // text

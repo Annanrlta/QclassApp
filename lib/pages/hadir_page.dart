@@ -4,9 +4,80 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:matcher/matcher.dart';
 import 'package:q_class/themes/themes.dart';
 
-class HadirPage extends StatelessWidget {
+class HadirPage extends StatefulWidget {
   const HadirPage({super.key});
 
+  @override
+  State<HadirPage> createState() => _HadirPageState();
+}
+
+// function pilih source untuk gambar
+  takeImage(mContext) {
+    return showDialog(
+      context: mContext,
+      builder: (context) {
+        return SimpleDialog(
+          title: Text(
+            'Pilih',
+            style: TextStyle(
+              color: Colors.amber,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          children: [
+            SimpleDialogOption(
+              child: Row(
+                children: const [
+                  Icon(Icons.camera_alt),
+                  Text(
+                    'Kamera',
+                    style: TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+                // checkoutC.getImage(ImageSource.camera);
+              },
+            ),
+            SimpleDialogOption(
+              child: Row(
+                children: const [
+                  Icon(Icons.image),
+                  Text(
+                    'Galeri ',
+                    style: TextStyle(
+                      color: Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
+              onPressed: () {
+                // Get.back();
+                // checkoutC.getImage(ImageSource.gallery);
+              },
+            ),
+            SimpleDialogOption(
+              child: Container(
+                alignment: Alignment.bottomRight,
+                child: const Text(
+                  'Batal',
+                  style: TextStyle(
+                    color: Colors.red,
+                  ),
+                ),
+              ),
+              onPressed: () => Navigator.pop(context),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+class _HadirPageState extends State<HadirPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -163,6 +234,32 @@ class HadirPage extends StatelessWidget {
               hintText: "Masukkan Password",
               hintStyle: greyTextstyle,
             )),
+
+            SizedBox(height: 60,),
+
+            
+
+            Container(
+              margin: EdgeInsets.only(left: 20, right: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                Text("Bukti Hadir", style: blackTextstyle,),
+
+                SizedBox(height: 10,),
+
+                //buttom pilih file
+                Center(
+                  child: TextButton(
+                    style: TextButton.styleFrom(backgroundColor: primaryColor),
+                    onPressed: () {
+                      takeImage(context);
+                    },
+                    child: Text("Pilih File"),
+                  ),
+                ),
+              ]),
+            ),
 
             SizedBox(height: 60,),
 
